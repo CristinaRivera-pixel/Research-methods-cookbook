@@ -1,0 +1,11 @@
+# Introduction
+
+Hello, my name is Cristina, and I am a student in the Masters of Applied Cognition and Neuroscience program here at the University of Texas at Dallas. This book is my Advanced Research methods Cookbook created in R studio using Quarto. Each "Recipe" will include a method I learned in class. As I understand more and more, I will add to this book! So far, I have one method, PCA, and I will add more as I learn more. The purpose of the Cookbook is to serve as a reference for myself later in the future, although just making the book has been so helpful in solidifying those connections, so I may not even need it! Each chapter has three sections:
+
+1.  Method Explanation
+2.  About the Data
+3.  Interpretation of the Data
+
+Each of the data analysis graphs were rendered using R studio. The Interpretation of the Data will be based off graphics and given results. Thats it. Enjoy.
+
+![](images/IMG_0807-03.jpeg)

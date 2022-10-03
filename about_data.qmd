@@ -1,0 +1,13 @@
+## The Data
+
+Before we analyze our datas findings, lets talk some about the data we will be working with. Our Data can be described as some kind of strawberry yogurt tasting with 8 Panelist per yogurt. The panelist each taste 7 yogurts and rates the yogurts based on 24 different sensory factors which we will call our variables. Since we have 8 panelist and 7 yogurt we will have 56 **observations** in total. Each observation has a total of 24 different sensory attributes that the panelist rate the yogurts so we don't know what the data looked like before it (but could extract the original values if need). In this example our sensory attributes are our **variables** Some examples of our variables are: Overall Aroma, Overall Flavor, Cheesiness, Fruitiness , Sweetness etc. The Data is mean normalized.
+
+Our data:
+
+-   8 panelist
+
+-   7 different strawberry yogurts
+
+-   56 observations
+
+-   24 variables per observation

@@ -1,0 +1,70 @@
+# PCA Basics
+
+PCA stands for principal component analysis.
+
+## What does PCA do?
+
+1.  PCA reduces dimensions
+2.  Helps us visualize the variables since we can't see beyond 2 dimensions and its hard to visualize things in more then 3 dimensions
+3.  Reduces noise in the data
+
+## What is PCA's goal and why?
+
+1.  Reduce Noise\
+    Reducing Noise in your dataset can be useful when you want to focus on what is important. Its easier to visualize the data when you have less dimensions. Not all data carry the same weight.
+2.  Compressing the dataset\
+    Compressing the dataset can make it easier and faster for machine learning applications or other types of analysis to go through the data
+3.  Helps use Visualize our dataset\
+    Each component will have variables that will often correlate with each other. Running a PCA can help us see those variables that have high levels of correlation with other variables.
+
+## Where is PCA used?
+
+-   In machine learning applications
+
+-   PCA technique is particularly useful in processing data where **multi-colinearity** exists between the **features**/**variables**.
+
+-   When there are a lot of dimensions in your data
+
+-   Can be used for denoising and data compression
+
+## PCA Terms
+
+Below are some terms that you will want to know before you jump in to the analysis.
+
+Observations
+
+:   These will be composed of our variables and their values. Observations can be separated by time, by categories (for example individual people can have their own observations) or other factors.
+
+Variables
+
+:   Part of an observation, could be something like a rating for a magazine. Needs to be continous.
+
+Standardization and Mean centering
+
+:   A way of making sure that each variable is on the same scale as all the other variables. if one variable is on a larger scale then the larger variable value could over take its contribution to the components. For example think of housing prices and number of rooms. If they were standardized then housing prices would over be over represented while number of room would be under represented.
+
+Components
+
+:   These are the new variables which are linear combinations of the initial variables.
+
+    Component 1 is always the component with the most variance with each subsequent component having less variance then the previous but more variance then the components after. Each component is orthogonal to each other.
+
+Covariance
+
+:   How two variables relate to each other . Can be positive, negative, or zero.
+
+Correlation
+
+:   Similar to covariance except it is restricted to a certain range.
+
+Eigenvectors
+
+:   contains eigenvalues from highest to lowest of all of variables.
+
+Eigenvalues
+
+:   we can think of eigen values as weights. It is important to keep eigenvectors with eigenvalues that contribute significantly to the components.
+
+## How are the Components created?
+
+The components are created using the eigenvectors and eigenvalues calculated from the covariance heat matrix. One thing that happens when we are creating components is that we don't use all of our eigenvectors which results in dimension reduction with some loss of accuracy. This loss in accuracy is always something to keep in mind as you will want to find the right balance of keeping accuracy loss low while not using the dimensions that don't contribute much.
