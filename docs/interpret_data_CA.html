@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Advanced Research Methods Cookbook - 2&nbsp; PCA Basics</title>
+<title>Advanced Research Methods Cookbook - 7&nbsp; Interpretation of the data for Both sets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./about_data.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./Symmetric vs Assym.html" rel="next">
+<link href="./about_data_CA.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PCA Basics</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interpretation of the data for Both sets</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -108,7 +108,7 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./method_exp.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PCA Basics</span></a>
+  <a href="./method_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PCA Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -143,7 +143,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./interpret_data_CA.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interpretation of the data for Both sets</span></a>
+  <a href="./interpret_data_CA.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interpretation of the data for Both sets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -167,11 +167,13 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-does-pca-do" id="toc-what-does-pca-do" class="nav-link active" data-scroll-target="#what-does-pca-do"> <span class="header-section-number">2.1</span> What does PCA do?</a></li>
-  <li><a href="#what-is-pcas-goal-and-why" id="toc-what-is-pcas-goal-and-why" class="nav-link" data-scroll-target="#what-is-pcas-goal-and-why"> <span class="header-section-number">2.2</span> What is PCA’s goal and why?</a></li>
-  <li><a href="#where-is-pca-used" id="toc-where-is-pca-used" class="nav-link" data-scroll-target="#where-is-pca-used"> <span class="header-section-number">2.3</span> Where is PCA used?</a></li>
-  <li><a href="#pca-terms" id="toc-pca-terms" class="nav-link" data-scroll-target="#pca-terms"> <span class="header-section-number">2.4</span> PCA Terms</a></li>
-  <li><a href="#how-are-the-components-created" id="toc-how-are-the-components-created" class="nav-link" data-scroll-target="#how-are-the-components-created"> <span class="header-section-number">2.5</span> How are the Components created?</a></li>
+  <li><a href="#chi-squared-residuals" id="toc-chi-squared-residuals" class="nav-link active" data-scroll-target="#chi-squared-residuals"> <span class="header-section-number">7.1</span> Chi Squared Residuals</a></li>
+  <li><a href="#the-eigenvalues-scree-plot" id="toc-the-eigenvalues-scree-plot" class="nav-link" data-scroll-target="#the-eigenvalues-scree-plot"> <span class="header-section-number">7.2</span> The Eigenvalues Scree plot</a></li>
+  <li><a href="#contribution-bar-plots" id="toc-contribution-bar-plots" class="nav-link" data-scroll-target="#contribution-bar-plots"> <span class="header-section-number">7.3</span> Contribution Bar plots</a>
+  <ul class="collapse">
+  <li><a href="#contribution-bar-plot-rows" id="toc-contribution-bar-plot-rows" class="nav-link" data-scroll-target="#contribution-bar-plot-rows"> <span class="header-section-number">7.3.1</span> Contribution bar plot Rows:</a></li>
+  <li><a href="#contribution-bar-plot-columns" id="toc-contribution-bar-plot-columns" class="nav-link" data-scroll-target="#contribution-bar-plot-columns"> <span class="header-section-number">7.3.2</span> Contribution bar plot Columns:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +182,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PCA Basics</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interpretation of the data for Both sets</span></h1>
 </div>
 
 
@@ -194,79 +196,48 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>PCA stands for principal component analysis.</p>
-<section id="what-does-pca-do" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="what-does-pca-do"><span class="header-section-number">2.1</span> What does PCA do?</h2>
-<ol type="1">
-<li>PCA reduces dimensions</li>
-<li>Helps us visualize the variables since we can’t see beyond 2 dimensions and its hard to visualize things in more then 3 dimensions</li>
-<li>Reduces noise in the data</li>
-</ol>
+<p>In our interpretation, we will be looking at symmetric and asymmetric results. For both the results , they have similarities in the data that we are using for it so we will take a look at those similarities first in isolation.</p>
+<section id="chi-squared-residuals" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="chi-squared-residuals"><span class="header-section-number">7.1</span> Chi Squared Residuals</h2>
+<p>Now that we have taken a look at the data we can look at our the first thing:</p>
+<p><strong>Chi Squared Residuals</strong> which is going to tell us which cells contribute most to our Chi square test. Cells with the highest absolute pearson residuals will tell us which one of them is contributing most.</p>
+<p><img src="images/paste-34A15E75.png" class="img-fluid"></p>
 </section>
-<section id="what-is-pcas-goal-and-why" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="what-is-pcas-goal-and-why"><span class="header-section-number">2.2</span> What is PCA’s goal and why?</h2>
-<ol type="1">
-<li>Reduce Noise<br>
-Reducing Noise in your dataset can be useful when you want to focus on what is important. Its easier to visualize the data when you have less dimensions. Not all data carry the same weight.</li>
-<li>Compressing the dataset<br>
-Compressing the dataset can make it easier and faster for machine learning applications or other types of analysis to go through the data</li>
-<li>Helps use Visualize our dataset<br>
-Each component will have variables that will often correlate with each other. Running a PCA can help us see those variables that have high levels of correlation with other variables.</li>
-</ol>
+<section id="the-eigenvalues-scree-plot" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="the-eigenvalues-scree-plot"><span class="header-section-number">7.2</span> The Eigenvalues Scree plot</h2>
+<p>Next, we will want to take a look at the eigenvalues scree plot. In this plot, we want to look at the dimensions above the kaiser line. There are three variables about the kaiser line, so we will want to keep those three variables. One thing to note here is that there is no steep decline, and the elbow test would not work in this case.</p>
+<p><img src="images/paste-B2C531AA.png" class="img-fluid"></p>
 </section>
-<section id="where-is-pca-used" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="where-is-pca-used"><span class="header-section-number">2.3</span> Where is PCA used?</h2>
-<ul>
-<li><p>In machine learning applications</p></li>
-<li><p>PCA technique is particularly useful in processing data where&nbsp;<strong>multi-colinearity</strong>&nbsp;exists between the&nbsp;<strong>features</strong>/<strong>variables</strong>.</p></li>
-<li><p>When there are a lot of dimensions in your data</p></li>
-<li><p>Can be used for denoising and data compression</p></li>
-</ul>
+<section id="contribution-bar-plots" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="contribution-bar-plots"><span class="header-section-number">7.3</span> Contribution Bar plots</h2>
+<section id="contribution-bar-plot-rows" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="contribution-bar-plot-rows"><span class="header-section-number">7.3.1</span> Contribution bar plot Rows:</h3>
+<section id="component-1" class="level4" data-number="7.3.1.1">
+<h4 data-number="7.3.1.1" class="anchored" data-anchor-id="component-1"><span class="header-section-number">7.3.1.1</span> Component 1:</h4>
+<p>Here we will want to see which of the rows will contribute most to our components. Looks like 4/8 of the perfume brands contribute to component one with the largest contribution being from Spicebomb Viktor and Rolf</p>
+<p><img src="images/paste-EB06A35D.png" class="img-fluid"></p>
 </section>
-<section id="pca-terms" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="pca-terms"><span class="header-section-number">2.4</span> PCA Terms</h2>
-<p>Below are some terms that you will want to know before you jump in to the analysis.</p>
-<dl>
-<dt>Observations</dt>
-<dd>
-<p>These will be composed of our variables and their values. Observations can be separated by time, by categories (for example individual people can have their own observations) or other factors.</p>
-</dd>
-<dt>Variables</dt>
-<dd>
-<p>Part of an observation, could be something like a rating for a magazine. Needs to be continous.</p>
-</dd>
-<dt>Standardization and Mean centering</dt>
-<dd>
-<p>A way of making sure that each variable is on the same scale as all the other variables. if one variable is on a larger scale then the larger variable value could over take its contribution to the components. For example think of housing prices and number of rooms. If they were standardized then housing prices would over be over represented while number of room would be under represented.</p>
-</dd>
-<dt>Components</dt>
-<dd>
-<p>These are the new variables which are linear combinations of the initial variables.</p>
-<p>Component 1 is always the component with the most variance with each subsequent component having less variance then the previous but more variance then the components after. Each component is orthogonal to each other.</p>
-</dd>
-<dt>Covariance</dt>
-<dd>
-<p>How two variables relate to each other . Can be positive, negative, or zero.</p>
-</dd>
-<dt>Correlation</dt>
-<dd>
-<p>Similar to covariance except it is restricted to a certain range.</p>
-</dd>
-<dt>Eigenvectors</dt>
-<dd>
-<p>contains eigenvalues from highest to lowest of all of variables.</p>
-</dd>
-<dt>Eigenvalues</dt>
-<dd>
-<p>we can think of eigen values as weights. It is important to keep eigenvectors with eigenvalues that contribute significantly to the components.</p>
-</dd>
-</dl>
+<section id="component-2" class="level4" data-number="7.3.1.2">
+<h4 data-number="7.3.1.2" class="anchored" data-anchor-id="component-2"><span class="header-section-number">7.3.1.2</span> Component 2:</h4>
+<p>Below for component 2 we have two perfumes that contribute the most with Terre d’Hermes beings the largest contributor by about three times as much as the next significant contributer Yves saint Laurent-Y by far coming in at .61.</p>
+<p><img src="images/paste-19AB5B34.png" class="img-fluid"></p>
 </section>
-<section id="how-are-the-components-created" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="how-are-the-components-created"><span class="header-section-number">2.5</span> How are the Components created?</h2>
-<p>The components are created using the eigenvectors and eigenvalues calculated from the covariance heat matrix. One thing that happens when we are creating components is that we don’t use all of our eigenvectors which results in dimension reduction with some loss of accuracy. This loss in accuracy is always something to keep in mind as you will want to find the right balance of keeping accuracy loss low while not using the dimensions that don’t contribute much.</p>
+</section>
+<section id="contribution-bar-plot-columns" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="contribution-bar-plot-columns"><span class="header-section-number">7.3.2</span> Contribution bar plot Columns:</h3>
+<section id="component-1-1" class="level4" data-number="7.3.2.1">
+<h4 data-number="7.3.2.1" class="anchored" data-anchor-id="component-1-1"><span class="header-section-number">7.3.2.1</span> Component 1</h4>
+<p><img src="images/paste-BA04E8D3.png" class="img-fluid"></p>
+<p>Cheap, sporty and Familiar seem to be our top 3 contributors here.</p>
+</section>
+<section id="component-2-1" class="level4" data-number="7.3.2.2">
+<h4 data-number="7.3.2.2" class="anchored" data-anchor-id="component-2-1"><span class="header-section-number">7.3.2.2</span> Component 2:</h4>
+<p><img src="images/paste-6AB14019.png" class="img-fluid"></p>
+<p>Next we will take a side by side look at our asymmetric vs symmetric results side by side.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -369,13 +340,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./about_data_CA.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">About the Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./about_data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Symmetric vs Assym.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Symmetric vs Asymmetric results</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

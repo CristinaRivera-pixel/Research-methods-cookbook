@@ -1,0 +1,29 @@
+# Inference
+
+Now lets take a look at our inference
+
+::: columns
+::: column
+![](images/paste-233A5BD1.png)
+:::
+
+::: column
+![](images/paste-03916365.png)
+:::
+:::
+
+Nothing surprising here, these are the same perfumes with the same ratio we get for our contribution bar plots.
+
+::: columns
+::: column
+![](images/paste-6DDCABB7.png)
+:::
+
+::: column
+![](images/paste-965A1808.png)
+:::
+:::
+
+For the first dimension, 4/8 had statistical significance.
+
+For our bootstrap ratios it appears only 1 of 8 had statistical significance four the second dimension

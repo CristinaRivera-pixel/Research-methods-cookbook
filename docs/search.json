@@ -110,5 +110,103 @@
     "title": "4  Interpreting the Data",
     "section": "4.6 Confidence and Tolerance Interval",
     "text": "4.6 Confidence and Tolerance Interval\n\n4.6.1 Tolerance Intervals\n\n\n\nTolerance Intervals with mean factor Scores\n\n\nOur Tolerance Intervals Gives is our maximum surfuce area of the points along with our mean factor scores which are illustrated by the triangles in the middle of the areas. This graph is great for illustrating the spread of the points and also showing us how our points compare to the average of the points. For example the Lala yogurt has a outliar observation that doesn’t seem to be anywhere close to the mean factor score for it.\n\n\n4.6.2 Confidence Intervals\n\nWhen analyzing components its important to think about the accuracy of the components. These confidence intervals represent the accuracy of our components to generalizing our yogurts. The larger the surface area of the yogurt, the less accurate we can that the component will represent for that yogurt. In this instance, we have a LaLa yogurt which seems to have a low confidence intervals. In contrast, our Danup yogurt will have a high degree of accuracy."
+  },
+  {
+    "objectID": "method_exp_CA.html",
+    "href": "method_exp_CA.html",
+    "title": "5  CA",
+    "section": "",
+    "text": "Correspondence analysis is a way of analyzing similarities and differences between different variables based on data given between a contingency table."
+  },
+  {
+    "objectID": "method_exp_CA.html#what-is-cas-goal-and-why",
+    "href": "method_exp_CA.html#what-is-cas-goal-and-why",
+    "title": "5  CA",
+    "section": "5.2 What is CA’s goal and why?",
+    "text": "5.2 What is CA’s goal and why?\n\nIts goal is to analyze relationships between variables based on relativeness."
+  },
+  {
+    "objectID": "method_exp_CA.html#where-is-correspondence-analysis-used",
+    "href": "method_exp_CA.html#where-is-correspondence-analysis-used",
+    "title": "5  CA",
+    "section": "5.3 Where is Correspondence Analysis used?",
+    "text": "5.3 Where is Correspondence Analysis used?\n\nThese types of analysis are often used in brand mapping to show the relationship between the brands and other competitors and the image and demographics these brands cultivate. For example, let us look at three different soda brands, Pepsi, Coke, and Diet Coke, and among those three brands, we look at other variables, such as age range, innovativeness, and income levels. We can plot our rows: Pepsi, Coke, and Diet Coke, to see how similar they are to one another. Not only does it give us that information, but it also tells us the demographics, such as age range and inventiveness, that each brand fits into based on the closeness of that brand to each variable.\nSome questions that correspondence analysis may answer for a brand keeping in mind this is in relation to other brands.\n\nWhat does our brand represent?\nWho is attracted most to our brand?\nWhat gaps in the market can we fill?"
+  },
+  {
+    "objectID": "about_data_CA.html",
+    "href": "about_data_CA.html",
+    "title": "6  About the Data",
+    "section": "",
+    "text": "Before we go into interpreting the data it is important to define what kind of data we are using in our correspondence analysis. In this correspondence analysis we are going to be using different brands of perfumes for our rows, and attributes of the perfumes for the columns."
+  },
+  {
+    "objectID": "about_data_CA.html#our-data",
+    "href": "about_data_CA.html#our-data",
+    "title": "6  About the Data",
+    "section": "6.1 Our data",
+    "text": "6.1 Our data\n\n8 brands of perfume.\n24 Different rated attributes for each perfume ex: Joyful, Classic, Cheap, Masculine. These ratings are an average of different observations."
+  },
+  {
+    "objectID": "about_data_CA.html#the-goal",
+    "href": "about_data_CA.html#the-goal",
+    "title": "6  About the Data",
+    "section": "6.2 The goal:",
+    "text": "6.2 The goal:\n\nTo interpret the brands relationships to each other, and also to interpret the brands proximity to the different attributes."
+  },
+  {
+    "objectID": "interpret_data_CA.html",
+    "href": "interpret_data_CA.html",
+    "title": "7  Interpretation of the data for Both sets",
+    "section": "",
+    "text": "In our interpretation, we will be looking at symmetric and asymmetric results. For both the results , they have similarities in the data that we are using for it so we will take a look at those similarities first in isolation."
+  },
+  {
+    "objectID": "interpret_data_CA.html#chi-squared-residuals",
+    "href": "interpret_data_CA.html#chi-squared-residuals",
+    "title": "7  Interpretation of the data for Both sets",
+    "section": "7.1 Chi Squared Residuals",
+    "text": "7.1 Chi Squared Residuals\nNow that we have taken a look at the data we can look at our the first thing:\nChi Squared Residuals which is going to tell us which cells contribute most to our Chi square test. Cells with the highest absolute pearson residuals will tell us which one of them is contributing most."
+  },
+  {
+    "objectID": "interpret_data_CA.html#the-eigenvalues-scree-plot",
+    "href": "interpret_data_CA.html#the-eigenvalues-scree-plot",
+    "title": "7  Interpretation of the data for Both sets",
+    "section": "7.2 The Eigenvalues Scree plot",
+    "text": "7.2 The Eigenvalues Scree plot\nNext, we will want to take a look at the eigenvalues scree plot. In this plot, we want to look at the dimensions above the kaiser line. There are three variables about the kaiser line, so we will want to keep those three variables. One thing to note here is that there is no steep decline, and the elbow test would not work in this case."
+  },
+  {
+    "objectID": "interpret_data_CA.html#contribution-bar-plots",
+    "href": "interpret_data_CA.html#contribution-bar-plots",
+    "title": "7  Interpretation of the data for Both sets",
+    "section": "7.3 Contribution Bar plots",
+    "text": "7.3 Contribution Bar plots\n\n7.3.1 Contribution bar plot Rows:\n\n7.3.1.1 Component 1:\nHere we will want to see which of the rows will contribute most to our components. Looks like 4/8 of the perfume brands contribute to component one with the largest contribution being from Spicebomb Viktor and Rolf\n\n\n\n7.3.1.2 Component 2:\nBelow for component 2 we have two perfumes that contribute the most with Terre d’Hermes beings the largest contributor by about three times as much as the next significant contributer Yves saint Laurent-Y by far coming in at .61.\n\n\n\n\n7.3.2 Contribution bar plot Columns:\n\n7.3.2.1 Component 1\n\nCheap, sporty and Familiar seem to be our top 3 contributors here.\n\n\n7.3.2.2 Component 2:\n\nNext we will take a side by side look at our asymmetric vs symmetric results side by side."
+  },
+  {
+    "objectID": "Symmetric vs Assym.html",
+    "href": "Symmetric vs Assym.html",
+    "title": "8  Symmetric vs Asymmetric results",
+    "section": "",
+    "text": "For our we need to take a look at both the symmetric and Asymmetric results. In these cases the only thing that has changed it s the column factor scores, which makes a big difference on some maps."
+  },
+  {
+    "objectID": "Symmetric vs Assym.html#first-i-want-to-take-a-look-at-the-factor-scores",
+    "href": "Symmetric vs Assym.html#first-i-want-to-take-a-look-at-the-factor-scores",
+    "title": "8  Symmetric vs Asymmetric results",
+    "section": "8.1 First i want to take a look at the factor scores:",
+    "text": "8.1 First i want to take a look at the factor scores:\n\n\nSymmetric\n\n\nAsymmetric\n\n\n\nFor the Asymmetric graph it does not look like we can trust the row data to be accurate when it comes to its proximity to any attributes, and its also a mess to look at when it comes to looking at the rows as well. The symmetric map in this case appears to be a better representation even if some of the distances are a bit exaggerated."
+  },
+  {
+    "objectID": "Symmetric vs Assym.html#final-observations",
+    "href": "Symmetric vs Assym.html#final-observations",
+    "title": "8  Symmetric vs Asymmetric results",
+    "section": "8.2 Final observations",
+    "text": "8.2 Final observations\nSo now that we have all our data lets interpret it.\nDimension 1\n\nRepresents perfumes that are on one end, cheap,sharp,sporty,strong, not familiar\n\nSpicebomb\nDior Homme\n\nRepresents perfumes on the other hand that are natural, seductive, and familiar\n\nJean Paul\n\nLastly, represents perfumes described as beautiful\n\nK by dolce and cabana\n\nDimension 2\n\nrepresents perfumes that are not addictive and old fashioned\n\nTerre D Hermes\n\nRepresents perfumes that are bold and addictive\n\nYves Saint laurent"
+  },
+  {
+    "objectID": "Bootstrap.html",
+    "href": "Bootstrap.html",
+    "title": "9  Inference",
+    "section": "",
+    "text": "Nothing surprising here, these are the same perfumes with the same ratio we get for our contribution bar plots.\n\n\n\n\n\n\n\nFor the first dimension, 4/8 had statistical significance.\nFor our bootstrap ratios it appears only 1 of 8 had statistical significance four the second dimension"
   }
 ]

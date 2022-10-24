@@ -13,6 +13,13 @@ book:
         - method_exp.qmd
         - about_data.qmd
         - interpret_data.qmd
+    - part: "Correspondance Analysis"
+      chapters: 
+        - method_exp_CA.qmd
+        - about_data_CA.qmd
+        - interpret_data_CA.qmd
+        - Symmetric vs Assym.qmd
+        - bootstrap.qmd
     - references.qmd
 
 bibliography: references.bib
