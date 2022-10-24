@@ -19,7 +19,7 @@ book:
         - about_data_CA.qmd
         - interpret_data_CA.qmd
         - Symmetric vs Assym.qmd
-        - bootstrap.qmd
+        - Bootstrap.qmd
     - references.qmd
 
 bibliography: references.bib
